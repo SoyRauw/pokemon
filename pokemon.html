@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon: ¿Quién es el Team Rocket?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="pokeball-deco"></div>
+
+        <div id="setup-screen">
+            <h1>Configurar Jugadores</h1>
+            <p>Añade los nombres de los entrenadores (Mínimo 3).</p>
+            
+            <input type="text" id="player-input" placeholder="Nombre del jugador">
+            <button class="add-btn" id="add-btn">Añadir Jugador</button>
+            
+            <ul id="player-list"></ul>
+            
+            <button class="start-btn" id="start-btn" disabled>¡Comenzar Partida!</button>
+        </div>
+
+        <div id="pass-screen" class="hidden">
+            <h1>¡Pasa el Móvil!</h1>
+            <p>Dale el dispositivo a:</p>
+            <h2 id="current-player-name" style="color: var(--secondary); font-size: 1.8rem;">Nombre</h2>
+            <br>
+            <button class="reveal-btn" id="reveal-btn">Ver mi carta</button>
+        </div>
+
+        <div id="role-screen" class="hidden">
+            <h1>Tu Misión</h1>
+            <p>Memoriza esto y no dejes que nadie lo vea.</p>
+            
+            <div class="card">
+                <span id="role-display" class="role-text">???</span>
+                <p id="role-desc">...</p>
+                <img id="role-image" class="role-image hidden" alt="Imagen del Pokémon" />
+            </div>
+
+            <button id="hide-role-btn">Entendido, ocultar</button>
+        </div>
+
+        <div id="game-screen" class="hidden">
+            <h1>¡A Jugar!</h1>
+            <p>El impostor (Team Rocket) está entre nosotros...</p>
+            <p>Hablad por turnos describiendo al Pokémon sin ser demasiado obvios.</p>
+            
+            <div style="margin-top: 30px; padding: 15px; background: #fff3cd; border-radius: 8px; color: #856404;">
+                <strong>¿Quién era el impostor?</strong>
+                <p id="imposter-reveal" class="hidden" style="font-weight: bold; font-size: 1.2rem; margin-top:10px;"></p>
+            </div>
+
+            <button class="reveal-btn" id="btn-reveal-imp">Revelar Impostor</button>
+            <button class="start-btn" id="reset-btn">Jugar Otra Vez</button>
+        </div>
+
+    </div>
+
+    <script defer src="app.js"></script>
+    
+</body>
+</html>
